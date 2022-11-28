@@ -1,0 +1,115 @@
+/* (A) MATERIAL ICONS */
+@font-face{font-family:"Material Icons";font-style:normal;font-weight:400px;src:url(assets/mi.woff2) format('woff2')}
+.mi{font-family:"Material Icons";font-weight:400px;font-style:normal;font-size:4vw;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}
+
+/* (B) WHOLE PAGE & SHARED */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body, #screenA, #screenB {
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  word-break: break-word;
+}
+body {
+  background: rgb(79,85,171);
+  background: linear-gradient(71deg, rgb(79,85,171) 0%, rgb(103,126,218) 77%, rgb(62,69,147) 100%);
+}
+.hide { display: none !important; }
+
+/* (C) MAIN MENU */
+#screenA { text-align: center; }
+.mItem {
+  width: 300px;
+  border-radius: 10px;
+  padding: 40px 0;
+  margin-bottom: 30px;
+  color: #fff;
+  background: #363578;
+  cursor: pointer;
+}
+.mItem:hover {
+  color: #333;
+  background: #f5ee03;
+}
+.mItem .mTxt { font-size: 2.5vw; }
+
+/* (D) VIEW CARDS */
+/* (D1) CARD WARPPER */
+#bCard {
+  width: 80%; height: 60%;
+  position: relative;
+}
+
+/* (D2) CARD BACK & FRONT */
+.card { cursor: pointer; }
+.card, .front, .back {
+  width: 100%; height: 100%;
+  top: 1em;
+  position: absolute;
+}
+.front, .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-break: break-word;
+  padding: 20px;
+  font-size: 2vw;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+.front, .mFront {
+  color: #2e189a;
+  background: #fff;
+}
+.back, .mBack {
+  color: #fff;
+  background: #2e189a;
+}
+.back { transform: rotateY(180deg); }
+.mFront, .mBack {
+  display: block;
+  width: 100%; height: 50%;
+  padding: 20px;
+  resize: none;
+  font-size: 2vw;
+}
+
+/* (D3) CARD FILP */
+.card {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+#bCard .card.flip { transform: rotateY(180deg); }
+
+/* (E) CARD CONTROLS */
+#bManage {
+  padding: 5vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+#bManage div.mi:hover {
+  color: #f5ee03;
+  cursor: pointer;
+}
+#bCardCount { font-size: 3vw; }
+
+#code-boxx {
+  text-align: center;
+  font-weight: 1vw;
+}
+#code-boxx a {
+  display: inline-block;
+  border: 0;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
+  color: #fff;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- TITLE + CHARSET + DESCRIPTION + VIEWPORT + FAVICON -->
+    <title>JS Flashcards</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Offline Javascript Flashcards">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- ANDROID + CHROME + APPLE + WINDOWS APP -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="white">
+    <link rel="apple-touch-icon" href="assets/icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Offline JS Flashcards">
+    <meta name="msapplication-TileImage" content="assets/icon-512.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <!-- WEB APP MANIFEST -->
+    <!-- https://web.dev/add-manifest/ -->
+    <link rel="manifest" href="3-manifest.json">
+
+    <!-- SERVICE WORKER -->
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("3-worker.js");
+    }
+    </script>
+
+    <!-- STYLESHEET + JAVASCRIPT -->
+    <link rel="stylesheet" href="2-flashcard.css">
+    <script src="2-flashcard.js"></script>
+  </head>
+  <body>
+    <!-- (A) MAIN MENU -->
+    <div id="screenA">
+      <div class="mItem" onclick="cards.view('v')">
+        <div class="mi">view_array</div>
+        <div class="mTxt">View Cards</div>
+      </div>
+      <div class="mItem" onclick="cards.view('m')">
+        <div class="mi">edit</div>
+        <div class="mTxt">Manage Cards</div>
+      </div>
+    </div>
+
+    <!-- (B) MANAGE/VIEW CARDS -->
+    <div id="screenB" class="hide">
+      <!-- (B1) CARDS WRAPPER -->
+      <div id="bCard"></div>
+
+      <!-- (B2) CONTROLS -->
+      <div id="bManage">
+        <div class="mi" onclick="cards.screen(0)">reply</div>
+        <div class="mi bManage" onclick="cards.delete()">clear</div>
+        <div class="mi bManage" onclick="cards.add()">add</div>
+        <div class="mi" onclick="cards.move()">navigate_before</div>
+        <div class="mi" onclick="cards.move(1)">navigate_next</div>
+        <div id="bCardCount">
+          <span id="bCardNow"></span> / <span id="bCardAll"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

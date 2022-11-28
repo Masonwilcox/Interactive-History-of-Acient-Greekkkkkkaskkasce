@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Archaic & Athens</title>
+
+
+    <script type="text/javascript">
+      var array = ['img/Athena.png','http://img/Atrium.png','http://img/Chaeronea.png'];
+      function shuffle(array) {
+      var currentIndex = array.length;
+      var temporaryValue;
+      var randomIndex;
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+      }
+      var shuffled_images = shuffle(array);
+      for(var i=0;i<3;i++) {
+      document.getElementById('girl' + (i+1)).src = shuffled_images[i] ;
+      }
+      </script>
+</head>
+<!-- Header -->
+<section id="header">
+  <div class="header container">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="#Map">
+          <h1><span>M</span>ason <span>W</span>ilcox</h1>
+        </a>
+      </div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a href="index.html#Map" data-after="Home">Home</a></li>
+          <li><a href="index.html#PGreeks" data-after="PGreeks">Pre-Greeks </a></li>
+          <li><a href="index.html#Archaic" data-after="Archaic">Archaic </a></li>
+          <li><a href="index.html#Classic" data-after="Classic">Classic </a></li>
+          <li><a href="index.html#Hellenic" data-after="Hellenic">Hellenic </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- AAH Section  -->
+  <section id="CIR">
+    <div class="CIR"> 
+        <div class="CIR-title"> Classic <span>P</span>eriod</div>
+        <div class="CIR-title2"> Im<span>a</span>ge</div> 
+        <div class="CIR-title3"> Reco<span>g</span>nition</div> 
+        <div class="Timeline-container">
+      
+    </div>
+  </section>
+  <!-- End AAH Section  -->
+ <div class="Cimages">
+  <body>
+    <img src="img/Athena.png" alt="0">
+    <img src="img/Atrium.png" alt="1">
+    <img src="img/Chaeronea.png" alt="2">
+    <img src="img/Charioteer.png" alt="3">
+    <img src="img/Corinthian.png" alt="4">
+    <img src="img/Derveni.png" alt="5">
+    <img src="img/Facade.png" alt="6">
+    <img src="img/Herms.png" alt="7">
+    <img src="img/larnax.png" alt="8">
+    <img src="img/Lebes.png" alt="9">
+    <img src="img/Long_Walls.png" alt="10">
+    <img src="img/Messene.png" alt="11">
+    <img src="img/names.png" alt="12">
+    <img src="img/Pythius.png" alt="13">
+    <img src="img/Rectilinear.png" alt="14">
+    <img src="img/Royal.png" alt="15">
+    <img src="img/Tholos.png" alt="16">
+    <img src="img/Tryannicides.png" alt="17">
+    <img src="img/Zeus.png" alt="18">
+    <img src="img/Parthenon.png" alt="19">
+    <img src="img/Treasur.png" alt="20">
+    <img src="img/Caryatid.png" alt="21">
+    <img src="img/Erectheion.png" alt="22">
+    <img src="img/Propylaia.png" alt="23">
+    <img src="img/Nike.png" alt="24">
+    <img src="img/Lyceum.png" alt="25">
+    <img src="img/Hephaisteion.png" alt="26">
+  </body>
+</div>
+
+
+</html>
